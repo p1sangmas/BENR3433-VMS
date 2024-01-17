@@ -44,10 +44,6 @@ var token;
 const privatekey = "PRXWGaming";
 var checkpassword;
 
-
-
-
-
 //password complexity
 const PASSWORD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
@@ -210,6 +206,8 @@ app.post('/loginSecurity', async function (req, res) {
   const hashed = await generateHash(password);
   await loginSecurity(res, idNumber, hashed);
 });
+
+
 
 //login as Admin
 /**
